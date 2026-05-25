@@ -51,6 +51,13 @@ corr_d     = 0.5;    // corrugation groove depth (roof_t − corr_d = 2.5 ≥ 1.
 dome_r     = 1.5;    // HVAC dome radius (H0 mm)
 dome_cyl_h = 1.5;    // HVAC dome cylinder height (H0 mm)
 
+// ── PARKING LOT ───────────────────────────────────────────────────────────────
+park_d_real   = 7000;   //  80.5 mm H0  (depth in front of building)
+park_space_real = 2500; //  28.7 mm H0  (parking space width)
+slab_t        = 1.0;    // concrete slab thickness
+park_line_w   = 0.8;    // parking space divider line width
+park_line_h   = 0.4;    // parking space divider line height above slab
+
 // ── ANNEX ─────────────────────────────────────────────────────────────────────
 annex_w_real  = 7000;   //  80.5 mm H0
 annex_d_real  = 9000;   // 103.4 mm H0
@@ -86,6 +93,10 @@ annex_d  = annex_d_real * S;
 annex_h  = annex_h_real * S;
 garage_w = garage_w_real * S;
 garage_h = garage_h_real * S;
+
+park_d       = park_d_real * S;
+park_space_w = park_space_real * S;
+park_total_w = main_w + annex_w;
 
 // ── MODULES ───────────────────────────────────────────────────────────────────
 
@@ -257,6 +268,22 @@ module annex_shell() {
     }
 }
 
+module parking_lot() {
+    // flat concrete slab in front of the building (y < 0)
+    translate([0, -park_d, 0])
+        cube([park_total_w, park_d, slab_t]);
+
+    // parking space divider lines running front-to-back (Y direction)
+    n_lines = floor(park_total_w / park_space_w) - 1;
+    for (i = [1 : n_lines]) {
+        translate([i * park_space_w - park_line_w/2, -park_d, slab_t])
+            cube([park_line_w, park_d, park_line_h]);
+    }
+    // front boundary line (at y = -park_d)
+    translate([0, -park_d, slab_t])
+        cube([park_total_w, park_line_w, park_line_h]);
+}
+
 // ── ASSEMBLY ──────────────────────────────────────────────────────────────────
 union() {
     main_shell();
@@ -266,4 +293,5 @@ union() {
     corrugated_roof();
     roof_domes();
     annex_shell();
+    parking_lot();
 }
