@@ -112,9 +112,10 @@ module floor_grooves() {
 module shell() {
     difference() {
         cube([bld_w, bld_d, bld_h + parapet_h]);
-        // hollow interior, open bottom
+        // hollow interior, open bottom — stops at eave height so the
+        // roof deck + parapet (bld_h → bld_h+parapet_h) stays solid
         translate([wall_t, wall_t, 0])
-            cube([bld_w - 2*wall_t, bld_d - 2*wall_t, bld_h + parapet_h]);
+            cube([bld_w - 2*wall_t, bld_d - 2*wall_t, bld_h]);
         front_cuts();
         back_cuts();
         gable_cuts();
