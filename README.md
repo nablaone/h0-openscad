@@ -68,6 +68,25 @@ PRL-era two-storey police station (*posterunek milicji*). Austere socialist func
 
 ---
 
+### Police Station (Cities Skylines style)
+
+Interpretation of the BTB Small Police Station Cities: Skylines asset. Two-storey main block with dark vertical metal panel siding, three-bay front facade with two prominent full-height pilasters at bay boundaries. Two large windows per bay per floor; centre bay has the entrance on the ground floor and windows on the first. Corrugated flat metal roof with 2.5 mm overhang and four HVAC dome vents. Raised sign panel above the entrance door with two concrete steps. Single-storey annex attached to the right with a large vehicle bay opening.
+
+| Dimension | Real | H0 |
+|-----------|------|----|
+| Main block | 18 m × 13 m | 206.9 × 149.4 mm |
+| Main height | 7.0 m + roof | 80.5 + 3 mm |
+| Annex | 7 m × 9 m × 4 m | 80.5 × 103.4 × 46.0 mm |
+
+**[View 3D model →](police_station_cs.stl)**
+
+| | File |
+|-|------|
+| OpenSCAD source | [police_station_cs.scad](police_station_cs.scad) |
+| STL | [police_station_cs.stl](police_station_cs.stl) |
+
+---
+
 ### Single Car Garage
 
 Standalone single car garage with a gabled roof, four-section sectional door on the front facade, and a small window on the left side wall.
