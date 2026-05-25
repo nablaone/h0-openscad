@@ -29,6 +29,27 @@ Features: flat roof with parapet, regular window grid on all facades, narrow sta
 
 ---
 
+### Marine Container
+
+ISO dry-cargo shipping container. Set `container_m = 6` for a 20 ft unit or `container_m = 12` for a 40 ft unit — width and height are identical for both per the ISO standard.
+
+Features: vertical corrugation grooves on both long side walls (0.8 mm pitch, 34 grooves on the 20 ft version), three horizontal panel rail grooves on the door end with a vertical centre groove between the two door leaves, two horizontal grooves on the sealed nose end.
+
+| | 20 ft (6 m) | 40 ft (12 m) |
+|--|------------|--------------|
+| Length | 69.6 mm | 140.1 mm |
+| Width | 28.0 mm | 28.0 mm |
+| Height | 29.8 mm | 29.8 mm |
+
+**[View 3D model →](marine_container.stl)**
+
+| | File |
+|-|------|
+| OpenSCAD source | [marine_container.scad](marine_container.scad) |
+| STL | [marine_container.stl](marine_container.stl) |
+
+---
+
 ### Police Station
 
 PRL-era two-storey police station (*posterunek milicji*). Austere socialist functionalist style: flat roof with parapet, five-bay window grid on front and back, two windows per floor on the side walls, pronounced horizontal cornice groove between the floors, and vertical concrete panel joint grooves. Ground-floor centre entrance with three concrete steps and a canopy.
