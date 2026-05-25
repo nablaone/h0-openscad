@@ -29,6 +29,24 @@ Features: flat roof with parapet, regular window grid on all facades, narrow sta
 
 ---
 
+### Police Station
+
+PRL-era two-storey police station (*posterunek milicji*). Austere socialist functionalist style: flat roof with parapet, five-bay window grid on front and back, two windows per floor on the side walls, pronounced horizontal cornice groove between the floors, and vertical concrete panel joint grooves. Ground-floor centre entrance with three concrete steps and a canopy.
+
+| Dimension | Real | H0 |
+|-----------|------|----|
+| Footprint | 18 m × 9 m | 206.9 × 103.4 mm |
+| Total height (with parapet) | 6.6 m | 75.9 mm |
+
+**[View 3D model →](police_station.stl)**
+
+| | File |
+|-|------|
+| OpenSCAD source | [police_station.scad](police_station.scad) |
+| STL | [police_station.stl](police_station.stl) |
+
+---
+
 ### Single Car Garage
 
 Standalone single car garage with a gabled roof, four-section sectional door on the front facade, and a small window on the left side wall.
