@@ -2,7 +2,7 @@
 
 3D printable models for an **H0 scale (1:87)** diorama. All objects are designed for visual realism on a layout — exteriors only, no interior detail. Sources are self-contained OpenSCAD files; outputs are STL files ready to slice.
 
-Click any STL link to open GitHub's interactive 3D viewer.
+Click any preview to open GitHub's interactive 3D viewer.
 
 ---
 
@@ -20,7 +20,7 @@ Features: flat roof with parapet, regular window grid on all facades, narrow sta
 | `bld_w_real` | 18000 mm | real-world building width |
 | `bld_d_real` | 12000 mm | real-world building depth |
 
-**[View 3D model →](ee_apartment_block.stl)**
+[![](ee_apartment_block.png)](ee_apartment_block.stl)
 
 | | File |
 |-|------|
@@ -41,7 +41,7 @@ Features: vertical corrugation grooves on both long side walls (0.8 mm pitch, 34
 | Width | 28.0 mm | 28.0 mm |
 | Height | 29.8 mm | 29.8 mm |
 
-**[View 3D model →](marine_container.stl)**
+[![](marine_container.png)](marine_container.stl)
 
 | | File |
 |-|------|
@@ -59,7 +59,7 @@ PRL-era two-storey police station (*posterunek milicji*). Austere socialist func
 | Footprint | 18 m × 9 m | 206.9 × 103.4 mm |
 | Total height (with parapet) | 6.6 m | 75.9 mm |
 
-**[View 3D model →](police_station.stl)**
+[![](police_station.png)](police_station.stl)
 
 | | File |
 |-|------|
@@ -78,7 +78,7 @@ Interpretation of the BTB Small Police Station Cities: Skylines asset. Two-store
 | Main height | 7.0 m + roof | 80.5 + 3 mm |
 | Annex | 7 m × 9 m × 4 m | 80.5 × 103.4 × 46.0 mm |
 
-**[View 3D model →](police_station_cs.stl)**
+[![](police_station_cs.png)](police_station_cs.stl)
 
 | | File |
 |-|------|
@@ -96,7 +96,7 @@ Standalone single car garage with a gabled roof, four-section sectional door on 
 | Footprint | 3 m × 5.5 m | 34.5 × 63.2 mm |
 | Eave height | 2.4 m | 27.6 mm |
 
-**[View 3D model →](single_car_garage.stl)**
+[![](single_car_garage.png)](single_car_garage.stl)
 
 | | File |
 |-|------|
@@ -116,7 +116,7 @@ Features: vertical plank texture on all four walls, door panel with a traditiona
 | Footprint | 1.1 m × 1.1 m | 12.6 × 12.6 mm |
 | Wall height | 2.0 m | 23.0 mm |
 
-**[View 3D model →](slawojka.stl)**
+[![](slawojka.png)](slawojka.stl)
 
 | | File |
 |-|------|
