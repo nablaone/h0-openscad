@@ -47,6 +47,26 @@ Standalone single car garage with a gabled roof, four-section sectional door on 
 
 ---
 
+### Sławojka (Polish Outdoor Toilet)
+
+Traditional Polish outhouse, mandated across rural Poland in the 1930s by minister Składkowski — hence the name. A small wooden plank box with a gabled roof, sized for one person.
+
+Features: vertical plank texture on all four walls, door panel with a traditional circular moon cutout, through-wall ventilation slot on the back wall near the top, small concrete entrance step.
+
+| Dimension | Real | H0 |
+|-----------|------|----|
+| Footprint | 1.1 m × 1.1 m | 12.6 × 12.6 mm |
+| Wall height | 2.0 m | 23.0 mm |
+
+**[View 3D model →](slawojka.stl)**
+
+| | File |
+|-|------|
+| OpenSCAD source | [slawojka.scad](slawojka.scad) |
+| STL | [slawojka.stl](slawojka.stl) |
+
+---
+
 ## Printing notes
 
 - All models print flat on the build plate with no required supports
