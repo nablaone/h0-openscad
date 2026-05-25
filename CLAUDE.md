@@ -51,6 +51,18 @@ Design for FDM printing without supports wherever possible:
 - Chimneys, gutters, window sills: include as separate `union()` additions, keep them thin but printable
 - No interior detail — buildings can be solid or have an open bottom shell (hollow box)
 
+## README maintenance
+
+`README.md` lists every design in **alphabetical order** by filename. After creating or significantly modifying a design, add or update its entry in `README.md`. Each entry must contain:
+
+1. `###` heading with a human-readable name
+2. One-paragraph description (what it is, key visual features, any parameters)
+3. Parameter table if the design is parametric
+4. `**[View 3D model →](file.stl)**` link (GitHub renders STL files as an interactive 3D viewer)
+5. A two-row table with links to the `.scad` source and the `.stl` output
+
+Insert the entry in alphabetical order by filename. Then commit both the new `.scad` / `.stl` and the updated `README.md` together.
+
 ## OpenSCAD style
 
 - Use `$fn = 32` (or 64 for prominent round features) globally at the top of each file
