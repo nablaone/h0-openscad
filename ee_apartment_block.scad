@@ -3,7 +3,8 @@
  * (1:87). Parametric: number of floors, real-world width, real-world depth. Flat roof
  * with parapet, regular grid of recessed windows on front and back facades, two narrow
  * stairwell windows per floor on gable ends, horizontal and vertical concrete panel joint
- * grooves, recessed entrance door at ground floor centre, canopy above entrance.
+ * grooves, recessed entrance door at ground floor centre, canopy above entrance,
+ * one rectangular concrete chimney shaft per bay on the roof.
  * FDM printable hollow shell open bottom, exterior detail only.
  */
 
@@ -33,6 +34,10 @@ door_w     = 1000 * S;      // entrance door width        11.5 mm
 door_h     = 2200 * S;      // entrance door height       25.3 mm
 
 balc_t     = 1.5;           // canopy slab thickness, fixed
+
+chimney_w  = 400  * S;      // chimney shaft width        4.6 mm
+chimney_d  = 400  * S;      // chimney shaft depth        4.6 mm
+chimney_h  = 700  * S;      // chimney height above roof  8.0 mm
 
 groove_w   = 0.8;           // panel joint groove width
 groove_d   = 0.6;           // panel joint groove depth
@@ -131,8 +136,20 @@ module entrance_canopy() {
         cube([cw, cp + wall_t, balc_t]);
 }
 
+module chimneys() {
+    // one shaft per bay, centred in X, placed at 2/3 depth from front
+    roof_top = bld_h + parapet_h;
+    cy = bld_d * 2/3 - chimney_d / 2;
+    for (b = [0 : n_bays - 1]) {
+        cx = b * bay_w + (bay_w - chimney_w) / 2;
+        translate([cx, cy, roof_top])
+            cube([chimney_w, chimney_d, chimney_h]);
+    }
+}
+
 // ── ASSEMBLY ──────────────────────────────────────────────────────────────────
 union() {
     shell();
     entrance_canopy();
+    chimneys();
 }
