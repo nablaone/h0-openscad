@@ -31,6 +31,11 @@ Every `.scad` file **must** start with a comment block containing the English pr
 
 Keep the prompt concise and precise. It must fully describe the object so the file can be regenerated from it alone.
 
+## Printer
+
+**Creality K1** — build volume: **220 × 220 × 250 mm** (X × Y × Z).
+Design all models to fit within this envelope.
+
 ## Printability rules
 
 Design for FDM printing without supports wherever possible:
