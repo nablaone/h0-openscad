@@ -20,12 +20,12 @@ Features: flat roof with parapet, regular window grid on all facades, narrow sta
 | `bld_w_real` | 18000 mm | real-world building width |
 | `bld_d_real` | 12000 mm | real-world building depth |
 
-[![](ee_apartment_block.png)](ee_apartment_block.stl)
+[![](ee_apartment_block/ee_apartment_block.png)](ee_apartment_block/ee_apartment_block.stl)
 
 | | File |
 |-|------|
-| OpenSCAD source | [ee_apartment_block.scad](ee_apartment_block.scad) |
-| STL | [ee_apartment_block.stl](ee_apartment_block.stl) |
+| OpenSCAD source | [ee_apartment_block.scad](ee_apartment_block/ee_apartment_block.scad) |
+| STL | [ee_apartment_block.stl](ee_apartment_block/ee_apartment_block.stl) |
 
 ---
 
@@ -41,12 +41,12 @@ Features: vertical corrugation grooves on both long side walls (0.8 mm pitch, 34
 | Width | 28.0 mm | 28.0 mm |
 | Height | 29.8 mm | 29.8 mm |
 
-[![](marine_container.png)](marine_container.stl)
+[![](marine_container/marine_container.png)](marine_container/marine_container.stl)
 
 | | File |
 |-|------|
-| OpenSCAD source | [marine_container.scad](marine_container.scad) |
-| STL | [marine_container.stl](marine_container.stl) |
+| OpenSCAD source | [marine_container.scad](marine_container/marine_container.scad) |
+| STL | [marine_container.stl](marine_container/marine_container.stl) |
 
 ---
 
@@ -59,31 +59,40 @@ PRL-era two-storey police station (*posterunek milicji*). Austere socialist func
 | Footprint | 18 m × 9 m | 206.9 × 103.4 mm |
 | Total height (with parapet) | 6.6 m | 75.9 mm |
 
-[![](police_station.png)](police_station.stl)
+[![](police_station/police_station.png)](police_station/police_station.stl)
 
 | | File |
 |-|------|
-| OpenSCAD source | [police_station.scad](police_station.scad) |
-| STL | [police_station.stl](police_station.stl) |
+| OpenSCAD source | [police_station.scad](police_station/police_station.scad) |
+| STL | [police_station.stl](police_station/police_station.stl) |
 
 ---
 
-### Police Station (Cities Skylines style)
+### Police Station — Cities Skylines style
 
-Interpretation of the BTB Small Police Station Cities: Skylines asset. Two-storey main block with dark vertical metal panel siding, three-bay front facade with two prominent full-height pilasters at bay boundaries. Two large windows per bay per floor; centre bay has the entrance on the ground floor and windows on the first. Corrugated flat metal roof with 2.5 mm overhang and four HVAC dome vents. Raised sign panel above the entrance door with two concrete steps. Single-storey annex attached to the right with a large vehicle bay opening. Concrete parking lot in front of the full building width with marked parking space dividers (7 m deep, 2.5 m space width).
+Interpretation of the BTB Small Police Station Cities: Skylines asset, split into three separately printable pieces.
 
-| Dimension | Real | H0 |
-|-----------|------|----|
-| Main block | 18 m × 13 m | 206.9 × 149.4 mm |
-| Main height | 7.0 m + roof | 80.5 + 3 mm |
-| Annex | 7 m × 9 m × 4 m | 80.5 × 103.4 × 46.0 mm |
+**Main building** — two-storey block with dark vertical metal panel siding, three-bay front facade with two prominent full-height pilasters at bay boundaries, two large windows per bay per floor, centre entrance with two concrete steps and raised sign panel, corrugated flat metal roof with four HVAC dome vents.
 
-[![](police_station_cs.png)](police_station_cs.stl)
+**Garage** — single-storey vehicle bay annex with a large centred door opening and metal panel siding on all four walls.
 
-| | File |
-|-|------|
-| OpenSCAD source | [police_station_cs.scad](police_station_cs.scad) |
-| STL | [police_station_cs.stl](police_station_cs.stl) |
+**Parking lot** — flat concrete slab in front of the main building with marked parking space dividers.
+
+| Piece | Real footprint | H0 footprint |
+|-------|---------------|--------------|
+| Building | 18 m × 13 m | 206.9 × 149.4 mm |
+| Garage | 7 m × 9 m × 4 m tall | 80.5 × 103.4 × 46.0 mm |
+| Parking lot | 18 m × 7 m | 206.9 × 80.5 mm |
+
+**[View building →](police_station_cs/police_station_cs_building.stl)**  
+**[View garage →](police_station_cs/police_station_cs_garage.stl)**  
+**[View parking lot →](police_station_cs/police_station_cs_parking.stl)**
+
+| | Source | STL |
+|-|--------|-----|
+| Building | [police_station_cs_building.scad](police_station_cs/police_station_cs_building.scad) | [police_station_cs_building.stl](police_station_cs/police_station_cs_building.stl) |
+| Garage | [police_station_cs_garage.scad](police_station_cs/police_station_cs_garage.scad) | [police_station_cs_garage.stl](police_station_cs/police_station_cs_garage.stl) |
+| Parking lot | [police_station_cs_parking.scad](police_station_cs/police_station_cs_parking.scad) | [police_station_cs_parking.stl](police_station_cs/police_station_cs_parking.stl) |
 
 ---
 
@@ -96,12 +105,12 @@ Standalone single car garage with a gabled roof, four-section sectional door on 
 | Footprint | 3 m × 5.5 m | 34.5 × 63.2 mm |
 | Eave height | 2.4 m | 27.6 mm |
 
-[![](single_car_garage.png)](single_car_garage.stl)
+[![](single_car_garage/single_car_garage.png)](single_car_garage/single_car_garage.stl)
 
 | | File |
 |-|------|
-| OpenSCAD source | [single_car_garage.scad](single_car_garage.scad) |
-| STL | [single_car_garage.stl](single_car_garage.stl) |
+| OpenSCAD source | [single_car_garage.scad](single_car_garage/single_car_garage.scad) |
+| STL | [single_car_garage.stl](single_car_garage/single_car_garage.stl) |
 
 ---
 
@@ -116,12 +125,12 @@ Features: vertical plank texture on all four walls, door panel with a traditiona
 | Footprint | 1.1 m × 1.1 m | 12.6 × 12.6 mm |
 | Wall height | 2.0 m | 23.0 mm |
 
-[![](slawojka.png)](slawojka.stl)
+[![](slawojka/slawojka.png)](slawojka/slawojka.stl)
 
 | | File |
 |-|------|
-| OpenSCAD source | [slawojka.scad](slawojka.scad) |
-| STL | [slawojka.stl](slawojka.stl) |
+| OpenSCAD source | [slawojka.scad](slawojka/slawojka.scad) |
+| STL | [slawojka.stl](slawojka/slawojka.stl) |
 
 ---
 
@@ -130,3 +139,4 @@ Features: vertical plank texture on all four walls, door panel with a traditiona
 - All models print flat on the build plate with no required supports
 - Recommended nozzle: 0.4 mm; minimum layer height: 0.1 mm
 - Scale: 1:87 — do **not** resize in the slicer
+- Printer: Creality K1 — build volume 220 × 220 × 250 mm

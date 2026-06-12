@@ -13,6 +13,30 @@
 
 Always think in real-world mm first, then divide by 87.
 
+## Repository layout
+
+Each design lives in its own directory named after the model (`snake_case`):
+
+```
+<model_name>/
+  Makefile                 # per-project build rules (same template for every project)
+  <model_name>.scad        # OpenSCAD source
+  <model_name>.stl         # exported mesh
+  <model_name>.png         # preview render
+```
+
+A multi-part design (e.g. `police_station_cs`) keeps all its parts in one directory:
+
+```
+police_station_cs/
+  Makefile
+  police_station_cs_building.scad / .stl
+  police_station_cs_garage.scad   / .stl
+  police_station_cs_parking.scad  / .stl
+```
+
+The root `Makefile` delegates to every project directory (`make all`, `make previews`, or `make <dir>`).
+
 ## File conventions
 
 - **Source**: `.scad` files, one object per file, self-contained (no `include`, no `use`, no external dependencies)

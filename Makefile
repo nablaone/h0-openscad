@@ -1,36 +1,18 @@
-OPENSCAD    ?= /Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD
-IMGSIZE     ?= 800,600
-COLORSCHEME ?= BeforeDawn
-CAMERA      := 0,0,0,55,0,25,500
+SUBDIRS := ee_apartment_block marine_container police_station police_station_cs \
+           single_car_garage slawojka
 
-SCAD  := $(wildcard *.scad)
-STLS  := $(SCAD:.scad=.stl)
-PNGS  := $(SCAD:.scad=.png)
-
-.PHONY: all previews help
-.DEFAULT_GOAL := help
+.PHONY: all previews help $(SUBDIRS)
 
 help:
 	@echo "Usage:"
-	@echo "  make all                  Regenerate all STL files from SCAD sources"
-	@echo "  make previews             Render PNG previews for all models"
-	@echo "  make <name>.stl           Regenerate a single STL (e.g. make slawojka.stl)"
-	@echo "  make <name>.png           Render preview for a single model"
+	@echo "  make all        Regenerate all STL files across all projects"
+	@echo "  make previews   Render PNG previews for all models"
+	@echo "  make <dir>      Build a single project (e.g. make slawojka)"
 	@echo ""
-	@echo "Options:"
-	@echo "  OPENSCAD=<path>           Override OpenSCAD binary (default: $(OPENSCAD))"
-	@echo "  COLORSCHEME=<name>        Preview color scheme (default: $(COLORSCHEME))"
-	@echo "  IMGSIZE=<w,h>             Preview image size (default: $(IMGSIZE))"
+	@echo "  Each project directory also has its own Makefile."
 
-all: $(STLS)
+all previews:
+	@for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
 
-previews: $(PNGS)
-
-%.stl: %.scad
-	$(OPENSCAD) -o $@ $<
-
-%.png: %.scad
-	$(OPENSCAD) --render --imgsize=$(IMGSIZE) \
-		--camera=$(CAMERA) --autocenter --viewall \
-		--colorscheme=$(COLORSCHEME) \
-		-o $@ $<
+$(SUBDIRS):
+	$(MAKE) -C $@
